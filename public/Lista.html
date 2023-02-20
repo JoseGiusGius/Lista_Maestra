@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/Styles/lista.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Maestra</title>
+  </head>
+
+  <body>
+    <header id="Header02">
+      <img src="/Assets/Logo Precision Seas.png" alt="Logo" />
+      <div id="User_data">
+        <p>Usuario:</p>
+        <p>Email:</p>
+        <input type="button" value="LogOut" id="LogOut" />
+      </div>
+    </header>
+
+    <div id="Layout">
+      <div id="Seccion_01">
+        <div id="Titulo_01">
+          <h2>Consultar datos</h2>
+        </div>
+
+        <div id="Consulta_OT">
+          <label htmlFor="COT">OT:</label>
+          <input type="text" id="COT" />
+        </div>
+
+        <div id="Indicadores">
+          <div id="I_DPL">DPL</div>
+          <div id="I_MR">MR</div>
+          <div id="I_COT">COT</div>
+          <div id="I_FACT">FACT</div>
+          <div id="I_PO">PO</div>
+          <div id="I_IMG">IMG</div>
+        </div>
+
+        <div id="Botones">
+          <input type="button" value="Consultar" id="Consultar" />
+          <input type="button" value=" Escribir " id="Escribir" />
+          <input type="button" value="Modificar" id="Modificar" />
+        </div>
+      </div>
+
+      <form id="Formulario">
+        <div id="Titulo_02">
+          <h2>Ingreso</h2>
+        </div>
+
+        <div id="Parametros">
+          <label htmlFor="Empresa">Empresa:</label>
+          <input type="text" id="Empresa" />
+          <label htmlFor="Cliente">Cliente:</label>
+          <input type="text" id="Cliente" />
+          <label htmlFor="OT">OT:</label>
+          <input type="text" id="OT" />
+          <label htmlFor="Cantidad">Cantidad:</label>
+          <input type="number" id="Cantidad" />
+          <label htmlFor="Entrada">Entrada:</label>
+          <input type="date" id="Entrada" />
+          <label htmlFor="Entrega">Entrega:</label>
+          <input type="date" id="Entrega" />
+        </div>
+      </form>
+    </div>
+
+    <div id="Box2"></div>
+    <script src="/SRC/lista.js"></script>
+  </body>
+</html>

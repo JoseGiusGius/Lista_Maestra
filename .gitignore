@@ -1,0 +1,18 @@
+# Ignorar archivos específicos
+webpack.config.js
+storage.rules
+serviceAccountKey.json
+package.json
+package-lock.json
+firestore.rules
+firebase.json
+.prettierrc
+.firebaserc
+.env.local
+
+# Ignorar carpetas específicas
+node_modules/
+.firebase/
+
+# Ignorar carpeta de build
+public/SRC/

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/Styles/lista.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Maestra</title>
+  </head>
+
+  <body>
+    <header id="Header02">
+      <img src="/Assets/Logo Precision Seas.png" alt="Logo" />
+      <div id="User_information">
+        <div id="User_name"></div>
+        <input type="button" value="LogOut" id="Boton_LogOut" />
+      </div>
+    </header>
+
+    <!-- SECCION PARA CAMBIO DE ESTADO -->
+    <div id="Estado_PopUp" class="PopUp">
+      <div class="Titulo_02">
+        <h2>Cambiar estado de OT</h2>
+      </div>
+
+      <div class="Botones_Estado">
+        <input type="button" value="Entregado" id="Entregado" />
+        <input type="button" value="Pendiente" id="Pendiente" />
+        <input type="button" value="Anulado" id="Anulado" />
+        <input type="button" value="On_Hold" id="On_Hold" />
+        <input type="button" value="Cerrar" id="Cerrar_E" />
+      </div>
+    </div>
+
+    <!-- SECCION PARA ETIQUETAS DE PLANOS -->
+    <div id="Plano_PopUp" class="PopUp">
+      <div class="Titulo_02">
+        <h2>Etiqueta Planos</h2>
+      </div>
+
+      <div class="Parametros">
+        <label htmlFor="Plano_0">Cliente/OT:</label>
+        <input type="text" id="Plano_0" />
+        <label htmlFor="Plano_1">Num.PO:</label>
+        <input type="text" id="Plano_1" />
+        <label htmlFor="Plano_2">Num.Plano:</label>
+        <input type="text" id="Plano_2" />
+        <label htmlFor="Plano_3">Despiece:</label>
+        <input type="text" id="Plano_3" />
+        <label htmlFor="Plano_4">Fecha:</label>
+        <input type="text" id="Plano_4" />
+        <label htmlFor="Plano_5">Cantidad:</label>
+        <input type="text" id="Plano_5" />
+      </div>
+
+      <div class="Botones1">
+        <input type="button" value="Imprimir" id="Boton_Imprimir_Plano" />
+        <input type="button" value="Cerrar" id="Boton_Cerrar_Plano" />
+      </div>
+    </div>
+
+    <!-- SECCION PARA ETIQUETAS DE ENTREGAS -->
+    <div id="Entrega_PopUp" class="PopUp">
+      <div class="Titulo_02">
+        <h2>Etiqueta Entregas</h2>
+      </div>
+
+      <div class="Parametros">
+        <label htmlFor="Entrega_0">Num.PO:</label>
+        <input type="text" id="Entrega_0" />
+        <label htmlFor="Entrega_1">Num.FACT:</label>
+        <input type="text" id="Entrega_1" />
+        <label htmlFor="Entrega_2">Empresa/Cliente:</label>
+        <input type="text" id="Entrega_2" />
+        <label htmlFor="Entrega_3">Proveedor:</label>
+        <input type="text" id="Entrega_3" />
+        <label htmlFor="Entrega_4">Descripcion:</label>
+        <input type="text" id="Entrega_4" />
+        <label htmlFor="Entrega_5">Cantidad:</label>
+        <input type="text" id="Entrega_5" />
+        <label htmlFor="Entrega_6">Entrega:</label>
+        <input type="text" id="Entrega_6" />
+      </div>
+
+      <div class="Botones1">
+        <input type="button" value="Imprimir" id="Boton_Imprimir_Entrega" />
+        <input type="button" value="Cerrar" id="Boton_Cerrar_Entrega" />
+      </div>
+    </div>
+
+    <!-- SECCION PARA ETIQUETAS DE EMERGENCIAS -->
+    <div id="Emergencia_PopUp" class="PopUp">
+      <div class="Titulo_02">
+        <h2>Etiqueta Emergencias</h2>
+      </div>
+
+      <div class="Parametros">
+        <label htmlFor="Emergencia_0">Empresa/Cliente:</label>
+        <input type="text" id="Emergencia_0" />
+        <label htmlFor="Emergencia_1">Descripcion:</label>
+        <input type="text" id="Emergencia_1" />
+        <label htmlFor="Emergencia_2">Cantidad:</label>
+        <input type="text" id="Emergencia_2" />
+        <label htmlFor="Emergencia_3">Entrega:</label>
+        <input type="text" id="Emergencia_3" />
+      </div>
+
+      <div class="Botones1">
+        <input type="button" value="Imprimir" id="Boton_Imprimir_Emergencia" />
+        <input type="button" value="Cerrar" id="Boton_Cerrar_Emergencia" />
+      </div>
+    </div>
+
+    <!-- SECCION PARA GUARDAR PLANOS -->
+    <div id="Almacen1_PopUp" class="PopUp">
+      <div class="Titulo_02">
+        <h2>Almacen de planos</h2>
+      </div>
+
+      <div class="Parametros">
+        <div id="Casilla_0">Plano 1</div>
+        <div id="Casilla_1">Plano 2</div>
+        <div id="Casilla_2">Plano 3</div>
+        <div id="Casilla_3">Plano 4</div>
+        <div id="Casilla_4">Plano 5</div>
+        <div id="Casilla_5">Plano 6</div>
+        <div id="Casilla_6">Plano 7</div>
+        <div id="Casilla_7">Plano 8</div>
+      </div>
+
+      <div class="Botones1">
+        <input type="button" value="Cargar" id="Cargar_Almacen1" />
+        <input type="button" value="Cerrar" id="Cerrar_Almacen1" />
+      </div>
+    </div>
+
+    <!-- SECCION PARA GUARDAR FACTURAS -->
+    <div id="Almacen2_PopUp" class="PopUp">
+      <div class="Titulo_02">
+        <h2>Almacen de facturas</h2>
+      </div>
+
+      <div class="Parametros">
+        <div id="Casilla_8">Fact 1</div>
+        <div id="Casilla_9">Fact 2</div>
+        <div id="Casilla_10">Fact 3</div>
+        <div id="Casilla_11">Fact 4</div>
+        <div id="Casilla_12">Fact 5</div>
+        <div id="Casilla_13">Fact 6</div>
+        <div id="Casilla_14">Fact 7</div>
+        <div id="Casilla_15">Fact 8</div>
+      </div>
+
+      <div class="Botones1">
+        <input type="button" value="Cargar" id="Cargar_Almacen2" />
+        <input type="button" value="Cerrar" id="Cerrar_Almacen2" />
+      </div>
+    </div>
+
+    <!-- PAGINA PRINCIPAL DE CONSULTA -->
+    <div id="Layout_01">
+      <div id="Seccion_01">
+        <div id="Titulo_01">
+          <h2>Consultar Documentos</h2>
+        </div>
+
+        <div id="Consulta_OT">
+          <label htmlFor="COT">OT:</label>
+          <input type="text" id="COT" />
+        </div>
+
+        <div id="Indicadores">
+          <div id="Boton_DPL">Gen DPL</div>
+          <div id="Boton_Fact">Fact</div>
+          <div id="Boton_Planos">Planos</div>
+          <div id="Casilla_16">MR</div>
+          <div id="Casilla_17">COT</div>
+          <div id="Casilla_18">PO</div>
+        </div>
+
+        <div class="Botones4">
+          <input type="button" value="Consultar Documento" id="Boton_Consultar_Documento" />
+          <input type="button" value="Modificar Documento" id="Boton_Modificar_Documento" />
+          <input type="button" value="Cambiar Estado" id="Boton_Cambiar_Estado" />
+          <input type="button" value="Etiqueta plano" id="Boton_Etiqueta_Plano" />
+          <input type="button" value="Etiqueta entrega" id="Boton_Etiqueta_Entrega" />
+          <input type="button" value="Etiqueta urgencia" id="Boton_Etiqueta_Urgencia" />
+        </div>
+      </div>
+
+      <form id="Formulario1">
+        <div class="Titulo_02">
+          <h2>Ingreso</h2>
+        </div>
+
+        <div class="Parametros">
+          <label htmlFor="Empresa">Empresa:</label>
+          <input list="Empresas" id="Empresa" />
+          <label htmlFor="Cliente">Cliente:</label>
+          <input type="text" id="Cliente" />
+          <label htmlFor="OT">OT:</label>
+          <input type="text" id="OT" />
+          <label htmlFor="Cantidad">Cantidad:</label>
+          <input type="number" id="Cantidad" />
+          <label htmlFor="Entrada">Entrada:</label>
+          <input type="date" id="Entrada" />
+          <label htmlFor="Entrega">Entrega:</label>
+          <input type="date" id="Entrega" />
+          <label htmlFor="Comentario">Comentario:</label>
+          <input type="text" id="Comentario" />
+        </div>
+
+        <div class="Botones2">
+          <input type="button" value="Crear documento" id="Boton_Crear_Documento" />
+        </div>
+      </form>
+
+      <form id="Formulario2">
+        <div class="Titulo_02">
+          <h2>Consulta Avanzada</h2>
+        </div>
+
+        <div class="Parametros">
+          <label htmlFor="A_Estado">Estado:</label>
+          <input list="Estados" id="A_Estado" />
+          <label htmlFor="A_Filtro">Filtro:</label>
+          <input list="Filtros" id="A_Filtro" />
+          <label htmlFor="A_Desde">Desde:</label>
+          <input type="date" id="A_Desde" />
+          <label htmlFor="A_Hasta">Hasta:</label>
+          <input type="date" id="A_Hasta" />
+          <label htmlFor="A_Empresa">Empresa:</label>
+          <input list="Empresas" id="A_Empresa" />
+          <label htmlFor="A_Comentario">Comentario:</label>
+          <input type="text" id="A_Comentario" />
+        </div>
+
+        <div class="Botones2">
+          <input type="button" value="Busqueda Avanzada" id="Boton_Busqueda_Avanzada" />
+        </div>
+      </form>
+    </div>
+
+    <!-- PAGINA PARA GENERAR DPL's -->
+    <div id="Seccion_DPL">
+
+      <form id="Operaciones_1" class="Formulario_DPL">
+        <label for="LOP_0" id="Label_0" class="Etiqueta">STP-0</label>
+        <input list="Procesos" id="LOP_0" class="Lista"/>
+        <input type="text" id="OP_0" class="Operacion" />
+
+        <label for="LOP_1" id="Label_1" class="Etiqueta">STP-1</label>
+        <input list="Procesos" id="LOP_1" class="Lista"/>
+        <input type="text" id="OP_1" class="Operacion" />
+
+        <label for="LOP_2" id="Label_2" class="Etiqueta">STP-2</label>
+        <input list="Procesos" id="LOP_2" class="Lista"/>
+        <input type="text" id="OP_2" class="Operacion" />
+
+        <label for="LOP_3" id="Label_3" class="Etiqueta">STP-3</label>
+        <input list="Procesos" id="LOP_3" class="Lista"/>
+        <input type="text" id="OP_3" class="Operacion" />
+
+        <label for="LOP_4" id="Label_4" class="Etiqueta">STP-4</label>
+        <input list="Procesos" id="LOP_4" class="Lista"/>
+        <input type="text" id="OP_4" class="Operacion" />
+      </form>
+
+      <form id="Operaciones_2" class="Formulario_DPL">
+        <label for="LOP_5" id="Label_5" class="Etiqueta">STP-5</label>
+        <input list="Procesos" id="LOP_5" class="Lista"/>
+        <input type="text" id="OP_5" class="Operacion" />
+
+        <label for="LOP_6" id="Label_6" class="Etiqueta">STP-6</label>
+        <input list="Procesos" id="LOP_6" class="Lista"/>
+        <input type="text" id="OP_6" class="Operacion" />
+
+        <label for="LOP_7" id="Label_7" class="Etiqueta">STP-7</label>
+        <input list="Procesos" id="LOP_7" class="Lista"/>
+        <input type="text" id="OP_7" class="Operacion" />
+
+        <label for="LOP_8" id="Label_8" class="Etiqueta">STP-8</label>
+        <input list="Procesos" id="LOP_8" class="Lista"/>
+        <input type="text" id="OP_8" class="Operacion" />
+
+        <label for="LOP_9" id="Label_9" class="Etiqueta">STP-9</label>
+        <input list="Procesos" id="LOP_9"class="Lista" />
+        <input type="text" id="OP_9" class="Operacion" />
+      </form>
+
+      <div id="Operaciones_3" class="Detalles_DPL">
+        <label htmlFor="DPL_0">Cliente:</label>
+        <input type="text" id="DPL_0" />
+        <label htmlFor="DPL_1">PO:</label>
+        <input type="text" id="DPL_1" />
+        <label htmlFor="DPL_2">Orden Trabajo:</label>
+        <input type="text" id="DPL_2" />
+        <label htmlFor="DPL_3">Item / Parte:</label>
+        <input type="text" id="DPL_3" />
+        <label htmlFor="DPL_4">Descripcion:</label>
+        <input type="text" id="DPL_4" />
+        <label htmlFor="DPL_5">Dibujo:</label>
+        <input type="text" id="DPL_5" />
+        <label htmlFor="DPL_6">Material:</label>
+        <input type="text" id="DPL_6" />
+        <label htmlFor="DPL_7">Proceso Externo:</label>
+        <input type="text" id="DPL_7" />
+        <label htmlFor="DPL_8">Cantidad Requerida:</label>
+        <input type="text" id="DPL_8" />
+        <label htmlFor="DPL_9">Cantidad Actual:</label>
+        <input type="text" id="DPL_9" />
+        <label htmlFor="DPL_10">Fecha Generada:</label>
+        <input type="text" id="DPL_10" />
+        <label htmlFor="DPL_11">Fecha de entrega:</label>
+        <input type="text" id="DPL_11" />
+
+        <div class="Botones3">
+          <input type="button" value="Cargar" id="Cargar_DPL" />
+          <input type="button" value="Generar" id="Generar_DPL" />
+          <input type="button" value="Cerrar" id="Cerrar_DPL" />
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- SECCION PARA MOSTRAR LOS REPORTES -->
+    <div id="Layout_02"></div>
+
+    <datalist id="Estados">
+      <option value="Pendiente"></option>
+      <option value="Entregado"></option>
+      <option value="On_Hold"></option>
+      <option value="Anulado"></option>
+    </datalist>
+
+    <datalist id="Filtros">
+      <option value="Generada"></option>
+      <option value="Entrega"></option>
+      <option value="Entrada"></option>
+    </datalist>
+
+    <datalist id="Empresas">
+      <option value="Abbott Medical"></option>
+      <option value="Abbott Vascular"></option>
+      <option value="Bayer"></option>
+      <option value="Boston"></option>
+      <option value="C-CINCO"></option>
+      <option value="Calox"></option>
+      <option value="Cooper Standard"></option>
+      <option value="Creganna"></option>
+      <option value="Elastica Surqui"></option>
+      <option value="Four Seasons"></option>
+      <option value="Heraeus"></option>
+      <option value="Intel"></option>
+      <option value="Inversiones Oridama"></option>
+      <option value="Jacks"></option>
+      <option value="Lab Barly"></option>
+      <option value="Lab Raven"></option>
+      <option value="Lab Stein"></option>
+      <option value="MOOG"></option>
+      <option value="NDC"></option>
+      <option value="Nextern"></option>
+      <option value="Panasonic"></option>
+      <option value="Panduit"></option>
+      <option value="Pinetwork"></option>
+      <option value="Precision Seas"></option>
+      <option value="Precmac"></option>
+      <option value="Samtec"></option>
+      <option value="SMC"></option>
+      <option value="TLS"></option>
+    </datalist>
+
+    <datalist id="Procesos">
+      <option value="(OP-10) - CORTE MATERIAL"></option>
+      <option value="(OP-20) - CONVENCIONAL - TORNO"></option>
+      <option value="(OP-30) - CONVENCIONAL - FRESA"></option>
+      <option value="(OP-40) - TORNO CNC"></option>
+      <option value="(OP-50) - FRESA CNC"></option>
+      <option value="(OP-60) - RECTIFICADO"></option>
+      <option value="(OP-70) - HOLE POPPER"></option>
+      <option value="(OP-80) - EDM"></option>
+      <option value="(OP-90) - WEDM"></option>
+      <option value="(OP-100) - RECUBRIMIENTO"></option>
+      <option value="(OP-110) - TRATAMIENTO TERMICO"></option>
+      <option value="(OP-120) - CALIDAD"></option>
+      <option value="(OP-130) - METAL MECANICA"></option>
+    </datalist>
+
+    <script src="/SRC/lista.js"></script>
+  </body>
+</html>

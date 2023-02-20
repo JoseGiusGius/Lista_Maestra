@@ -1,0 +1,51 @@
+body {
+  display: grid;
+  background-image: url("/Assets/Background.jpg");
+  background-size: cover;
+  justify-items: center;
+}
+
+#header01 {
+  margin: 20px;
+}
+#header01 > img {
+  box-sizing: border-box;
+  border: 5px solid black;
+  border-radius: 20px;
+  height: 100px;
+}
+
+#Login {
+  height: 30px;
+  width: 40%;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: lightblue;
+}
+
+#Box1 {
+  display: grid;
+  margin: 20px;
+  height: 400px;
+  width: 300px;
+  border: 5px solid lightblue;
+  border-radius: 20px;
+  background-color: white;
+  justify-items: center;
+  align-content: center;
+  font-size: medium;
+  font-weight: bold;
+}
+#Box1 > input {
+  margin: 20px;
+}
+#Box1 > input:hover {
+  background-color: lightgray;
+}
+
+#Message {
+  text-align: center;
+  color: red;
+  height: 30px;
+  width: 170px;
+}
